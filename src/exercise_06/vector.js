@@ -14,22 +14,16 @@ export default class Vector {
 
     // PLEASE DELETE THIS LINE AND ADD YOUR IMPLEMENTATION HERE
     constructor(x, y) {
-        this.x = x;
-        this.y = y;
+        this._x = x;
+        this._y = y;
     }
 
-    // get x() {
-    //     return this.x;
-    // }
-    // get y() {
-    //     return this.y;
-    // }
-    // set x(value) {
-    //     throw "";
-    // }
-    // set y(value) {
-    //     throw "";
-    // }
+    get x() {
+        return this._x;
+    }
+    get y() {
+        return this._y;
+    }
 
     static plus(v1, v2) {
         return new Vector(v1.x + v2.x, v1.y + v2.y);
@@ -39,6 +33,6 @@ export default class Vector {
         return new Vector(v1.x - v2.x, v1.y - v2.y);
     }
     distance() {
-        return Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2));
+        return Math.sqrt(Math.pow(this._x, 2) + Math.pow(this._y, 2));
     }
 }
